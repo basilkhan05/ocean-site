@@ -1,0 +1,3 @@
+# ocean-site
+
+The public vision page for [Ocean](https://github.com/basilkhan05/ocean), a phone whose operating system is an agent. It describes Ocean as it will look about ten years from now: one device with hardware and software designed together, an attention system that sorts what arrives, ephemeral UI, a real Unix computer underneath, and an append-only log of every action. It is a static site for GitHub Pages with no build step. Everything lives in `index.html` (inline CSS, inline JS, and a small WebGL shader for the listening orb), alongside `og.jpg` and the icon PNGs. To preview it locally, run `python3 -m http.server` in this directory.
