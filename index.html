@@ -605,17 +605,17 @@ a:hover { text-decoration-color: var(--lumen); color: #fff; }
           <div class="talk-wrap">
             <ol class="talk" role="list" aria-label="A conversation on the way to work">
               <li class="talk__line you" data-at=".035"><div class="talk__in"><span class="who">You</span><p>What's waiting for me?</p></div></li>
-              <li class="talk__line ocean" data-at=".1" data-speak=".11 .35"><div class="talk__in"><span class="who">Ocean</span><p>Three things. Your sister wants to move Sunday dinner to six, and you're free. Your Lisbon flight is confirmed. And the one that needs you: Anderson, PR 4812. Tests pass, one potential issue.</p></div></li>
+              <li class="talk__line ocean" data-at=".1" data-speak=".11 .35"><div class="talk__in"><span class="who">Ocean</span><p>Three things. Your sister wants to move Sunday dinner to six, and you're free. Your Lisbon flight is confirmed. And the one that needs you: Mira's PR 4812. Tests pass, one potential issue.</p></div></li>
               <li class="talk__line you" data-at=".39"><div class="talk__in"><span class="who">You</span><p>Show me.</p></div></li>
               <li class="talk__line you" data-at=".585"><div class="talk__in"><span class="who">You</span><p>Approve with a comment about the retry logic.</p></div></li>
-              <li class="talk__line ocean" data-at=".735" data-speak=".745 .84"><div class="talk__in"><span class="who">Ocean</span><p>Approved. I asked Anderson to cap the retries and add some jitter.</p></div></li>
+              <li class="talk__line ocean" data-at=".735" data-speak=".745 .84"><div class="talk__in"><span class="who">Ocean</span><p>Approved. I asked Mira to cap the retries and add some jitter.</p></div></li>
             </ol>
           </div>
           <div class="slot">
             <div class="slot__inner">
               <article class="card" aria-label="Pull request 4812, shown on request">
                 <div class="card__head">
-                  <span class="card__repo">anderson/payments</span><span class="card__num">#4812</span>
+                  <span class="card__repo">tern/payments</span><span class="card__num">#4812</span>
                   <span class="card__pass"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.4 4.7 9 10 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Tests pass</span>
                 </div>
                 <h3 class="card__title">Retry webhook delivery on failure</h3>
@@ -625,7 +625,7 @@ a:hover { text-decoration-color: var(--lumen); color: #fff; }
               </article>
               <canvas class="dust" aria-hidden="true"></canvas>
             </div>
-            <p class="commit">commit <b>3a90c4e</b><br>approved anderson/payments#4812</p>
+            <p class="commit">commit <b>3a90c4e</b><br>approved tern/payments#4812</p>
           </div>
         </div>
         <p class="walk__outro">Forty seconds, and the phone is back in your pocket.</p>
@@ -735,19 +735,19 @@ a:hover { text-decoration-color: var(--lumen); color: #fff; }
       <h2 id="s-comp" class="title" data-reveal>Underneath, a real computer.</h2>
       <p class="measure" data-reveal>Ocean runs on Linux, and the whole Unix userland is within the agent's reach: ssh, tmux, git, compilers, and your own coding agents. Your servers and workstations are a sentence away. Set the phone on a desk and the same agent spreads out into a desktop, with the same files and sessions.</p>
       <div class="computer__grid">
-        <div class="say you say--you" data-reveal><span class="who">You</span><p>Connect to the herder box and tell me what the bundles sessions are doing. Start a new one on the flaky checkout test, and open a PR when it's green.</p></div>
+        <div class="say you say--you" data-reveal><span class="who">You</span><p>Connect to the build box and tell me what the tern sessions are doing. Start a new one on the flaky checkout test, and open a PR when it's green.</p></div>
         <figure class="term">
           <figcaption>What Ocean ran</figcaption>
           <div class="term__body">
-            <span class="r c"><span class="pr">$ </span><span class="t">ssh herder</span></span>
+            <span class="r c"><span class="pr">$ </span><span class="t">ssh atlas</span></span>
             <span class="r c"><span class="pr">$ </span><span class="t">tmux ls</span></span>
-            <span class="r">bundles-api    idle 2h</span>
-            <span class="r">bundles-jobs   waiting on migration</span>
-            <span class="r">bundles-web    running tests</span>
-            <span class="r c"><span class="pr">$ </span><span class="t">tmux capture-pane -pt bundles-web</span></span>
+            <span class="r">tern-api       idle 2h</span>
+            <span class="r">tern-jobs      waiting on migration</span>
+            <span class="r">tern-web       running tests</span>
+            <span class="r c"><span class="pr">$ </span><span class="t">tmux capture-pane -pt tern-web</span></span>
             <span class="r">311 passed, 1 flaky: checkout.spec.ts</span>
             <span class="r c"><span class="pr">$ </span><span class="t">agent new checkout-fix --pr-when-green</span></span>
-            <span class="r ok">started checkout-fix on herder</span>
+            <span class="r ok">started checkout-fix on atlas</span>
           </div>
         </figure>
         <div class="say ocean say--oc"><span class="who">Ocean</span><p>Web is running tests, and one checkout spec is flaky. Jobs is waiting on a migration. The API session has been idle for two hours. I started a session on the flaky spec, and I'll tell you when its PR is up.</p></div>
@@ -791,10 +791,10 @@ a:hover { text-decoration-color: var(--lumen); color: #fff; }
       </div>
       <ol class="log" role="list" aria-label="Today's log">
         <li style="--i:0"><span class="h">e41c09a</span><span class="t">07:02</span><span class="a">brief delivered: 3 waiting, 1 needs attention</span></li>
-        <li style="--i:1"><span class="h">3a90c4e</span><span class="t">08:41</span><span class="a">approved anderson/payments#4812, comment on retry logic</span></li>
-        <li style="--i:2"><span class="h">c72e5b8</span><span class="t">14:16</span><span class="a">ssh herder: read 3 tmux sessions</span></li>
+        <li style="--i:1"><span class="h">3a90c4e</span><span class="t">08:41</span><span class="a">approved tern/payments#4812, comment on retry logic</span></li>
+        <li style="--i:2"><span class="h">c72e5b8</span><span class="t">14:16</span><span class="a">ssh atlas: read 3 tmux sessions</span></li>
         <li style="--i:3"><span class="h">51d8a3f</span><span class="t">14:17</span><span class="a">started agent session checkout-fix</span></li>
-        <li style="--i:4"><span class="h">f0a62e7</span><span class="t">15:52</span><span class="a">opened bundles/web#4813, tests passing</span></li>
+        <li style="--i:4"><span class="h">f0a62e7</span><span class="t">15:52</span><span class="a">opened tern/web#4813, tests passing</span></li>
         <li style="--i:5"><span class="h">8d14b39</span><span class="t">19:47</span><span class="a">answered a call in quiet hours, took a message</span></li>
         <li style="--i:6"><span class="h">a2c6e91</span><span class="t">23:59</span><span class="a">day sealed: 118 entries, chain verified</span></li>
       </ol>
